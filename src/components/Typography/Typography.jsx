@@ -8,23 +8,51 @@ const Typography = (props) => {
     const getVarient = () => {
         switch (varient) {
             case 'h1':
-                return <h1 className={className}>{children}</h1>;
+                return (
+                    <h1 id={id} className={className}>
+                        {children}
+                    </h1>
+                );
             case 'h2':
-                return <h2 className={className}>{children}</h2>;
+                return (
+                    <h2 id={id} className={className}>
+                        {children}
+                    </h2>
+                );
             case 'h3':
-                return <h3 className={className}>{children}</h3>;
+                return (
+                    <h3 id={id} className={className}>
+                        {children}
+                    </h3>
+                );
             case 'h4':
-                return <h4 className={className}>{children}</h4>;
+                return (
+                    <h4 id={id} className={className}>
+                        {children}
+                    </h4>
+                );
             case 'h5':
-                return <h5 className={className}>{children}</h5>;
+                return (
+                    <h5 id={id} className={className}>
+                        {children}
+                    </h5>
+                );
             case 'h6':
-                return <h6 className={className}>{children}</h6>;
+                return (
+                    <h6 id={id} className={className}>
+                        {children}
+                    </h6>
+                );
             default:
-                return <h5 className={className}>{children}</h5>;
+                return (
+                    <h5 id={id} className={className}>
+                        {children}
+                    </h5>
+                );
         }
     };
 
-    return <div id={id}>{getVarient()}</div>;
+    return <>{getVarient()}</>;
 };
 
 Typography.propTypes = {

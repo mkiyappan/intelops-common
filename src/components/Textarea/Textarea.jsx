@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '../../assets/style/soft-ui-dashboard-tailwind.css';
 
-const Typography = (props) => {
+const Textarea = (props) => {
     const { id, className, rows = 5, placeholder, name, children } = props;
 
     return (
         <textarea
+            id={id}
             name={name}
             rows={rows}
             placeholder={placeholder}
@@ -17,21 +18,31 @@ const Typography = (props) => {
     );
 };
 
-Typography.propTypes = {
+Textarea.propTypes = {
     /**
-     * Specify a custom `id` for the `<Typography>`
+     * Specify a custom `id` for the `<Textarea>`
      */
     id: PropTypes.string,
 
     /**
-     * Specify a custom `className` for the `<Typography>`
+     * Specify a custom `className` for the `<Textarea>`
      */
     className: PropTypes.string,
 
     /**
-     * Specify a `name` for the `<Typography>`
+     * Specify a `rows` for the `<Textarea>`
+     */
+    rows: PropTypes.number,
+
+    /**
+     * Specify a `placeholder` for the `<Textarea>`
+     */
+    placeholder: PropTypes.string,
+
+    /**
+     * Specify a `name` for the `<Textarea>`
      */
     name: PropTypes.string
 };
 
-export default Typography;
+export default Textarea;

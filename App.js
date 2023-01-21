@@ -6,6 +6,7 @@ import Alert from './src/components/Alert/Alert';
 import Chip from './src/components/Chip/Chip';
 import Progress from './src/components/Progress/Progress';
 import Typography from './src/components/Typography/Typography';
+import Textarea from './src/components/Textarea';
 const App = () => {
     const [value, setValue] = useState('');
     const handleChange = (e) => {
@@ -19,6 +20,7 @@ const App = () => {
             <Chip>Heloo</Chip>
             <Progress varient="fuchsia" progressPercentage="100%" />
             <Typography variant="h6">Hello</Typography>
+            <Textarea>Heloooo world</Textarea>
         </div>
     );
 };
