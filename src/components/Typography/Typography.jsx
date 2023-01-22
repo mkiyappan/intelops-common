@@ -67,6 +67,11 @@ Typography.propTypes = {
     className: PropTypes.string,
 
     /**
+     * The content of the component.
+     */
+    children: PropTypes.node,
+
+    /**
      * Applies the typography styles.
      * @default 'h5'
      */

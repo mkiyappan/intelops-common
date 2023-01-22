@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+
 import '../../assets/style/soft-ui-dashboard-tailwind.css';
 
 const Chip = (props) => {
@@ -42,7 +43,7 @@ const Chip = (props) => {
 
     return (
         <div id={id}>
-            <span class={`${chipVarient} ${className}`}> {children} </span>
+            <span className={`${chipVarient} ${className}`}> {children} </span>
         </div>
     );
 };
@@ -57,6 +58,11 @@ Chip.propTypes = {
      * Specify a custom `className` for the `<Chip>`
      */
     className: PropTypes.string,
+
+    /**
+     * The content of the component.
+     */
+    children: PropTypes.node,
 
     /**
      * Specify a custom `varient` for the `<Chip>`

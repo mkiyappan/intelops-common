@@ -1,7 +1,7 @@
 {
   "name": "intelops_ui",
   "version": "1.0.0",
-  "description": "create Hello\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C WOrld React App",
+  "description": "intelops-common-ui components",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",

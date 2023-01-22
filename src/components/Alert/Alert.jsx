@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import '../../assets/style/soft-ui-dashboard-tailwind.css';
 import PropTypes from 'prop-types';
+
+import '../../assets/style/soft-ui-dashboard-tailwind.css';
 
 const Alert = (props) => {
     const [alertVarient, setAlertVarient] = useState('relative w-full p-4 mb-4 text-white border');
@@ -56,10 +57,10 @@ const Alert = (props) => {
                         <button
                             alert-close
                             type="button"
-                            class="box-content absolute top-0 right-0 p-4 text-sm text-white bg-transparent border-0 rounded w-4 h-4 z-2"
+                            className="box-content absolute top-0 right-0 p-4 text-sm text-white bg-transparent border-0 rounded w-4 h-4 z-2"
                             onClick={handleCloseAlert}
                         >
-                            <span aria-hidden="true" class="text-center cursor-pointer">
+                            <span aria-hidden="true" className="text-center cursor-pointer">
                                 &#10005;
                             </span>
                         </button>
@@ -72,74 +73,24 @@ const Alert = (props) => {
 
 Alert.propTypes = {
     /**
-     * Specify a custom `id` for the `<alert>`
+     * The content of the component.
+     */
+    children: PropTypes.node,
+
+    /**
+     * Specify a custom `id` for the `<Alert>`
      */
     id: PropTypes.string,
 
     /**
-     * Specify a custom `className` for the `<b utton>`
+     * Specify a custom `className` for the `<Alert>`
      */
     className: PropTypes.string,
 
     /**
-     * Specify a custom `varient` for the `<Chip>`
+     * Specify a custom `varient` for the `<Alert>`
      */
-    varient: PropTypes.string,
-
-    /**
-     * Specify the value of the `<input>`
-     */
-    value: PropTypes.string,
-
-    /**
-     * Provide the text that will be read by a screen reader when visiting this
-     * control
-     */
-    label: PropTypes.node,
-
-    /**
-     * Optionally provide an `onChange` handler that is called whenever `<input>`
-     * is updated
-     */
-    onChange: PropTypes.func,
-
-    /**
-     * Optionally provide an `onClick` handler that is called whenever the
-     * `<input>` is clicked
-     */
-    onClick: PropTypes.func,
-
-    /**
-     * Specify the placeholder attribute for the `<input>`
-     */
-    placeholder: PropTypes.string,
-
-    /**
-     * Name attribute of the `<input>` element.
-     */
-    name: PropTypes.string,
-
-    /**
-     * Type of the `input` element. It should be [a valid HTML5 input type](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types).
-     */
-    type: PropTypes.string,
-
-    /**
-     * The value of the `input` element, required for a controlled component.
-     */
-    value: PropTypes.any,
-
-    /**
-     * If `true`, the label is displayed as required and the `input` element is required.
-     * @default false
-     */
-    required: PropTypes.bool,
-
-    /**
-     * If `true`, the component is disabled.
-     * @default false
-     */
-    disabled: PropTypes.bool
+    varient: PropTypes.string
 };
 
 export default Alert;

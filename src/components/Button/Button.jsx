@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faList } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 
 import './button.css';
@@ -11,7 +9,7 @@ const Button = (props) => {
         'inline-block px-6 py-3 mr-3 font-bold text-center uppercase align-middle transition-all rounded-lg cursor-pointer leading-pro text-xs ease-soft-in tracking-tight-soft hover:scale-102'
     );
 
-    const { id, className, varient, type = 'button', disabled = false, colour = 'text-white' } = props;
+    const { id, className, varient, type = 'button', disabled = false } = props;
 
     useEffect(() => {
         switch (varient) {
@@ -54,16 +52,9 @@ const Button = (props) => {
 
     return (
         <div className="buttonWrapper">
-            {varient === 'setIcon' ? (
-                <button id={id} type={type} disabled={disabled} className={(buttonVarient, className)} onClick={handleButtonClick}>
-                    {props.children}
-                    <FontAwesomeIcon icon={faList} />
-                </button>
-            ) : (
-                <button id={id} type={type} disabled={disabled} className={(buttonVarient, className)} onClick={handleButtonClick}>
-                    {props.children}
-                </button>
-            )}
+            <button id={id} type={type} disabled={disabled} className={`${buttonVarient} ${className}`} onClick={handleButtonClick}>
+                {props.children}
+            </button>
         </div>
     );
 };
