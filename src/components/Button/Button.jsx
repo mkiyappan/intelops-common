@@ -9,7 +9,7 @@ const Button = (props) => {
         'inline-block px-6 py-3 mr-3 font-bold text-center uppercase align-middle transition-all rounded-lg cursor-pointer leading-pro text-xs ease-soft-in tracking-tight-soft hover:scale-102'
     );
 
-    const { id, className, varient, type = 'button', disabled = false } = props;
+    const { id, className, children, varient, type = 'button', disabled = false, onClick = () => {} } = props;
 
     useEffect(() => {
         switch (varient) {
@@ -46,14 +46,14 @@ const Button = (props) => {
         }
     }, []);
 
-    const handleButtonClick = () => {
-        props.onClick();
+    const handleButtonClick = (event) => {
+        onClick(event);
     };
 
     return (
         <div className="buttonWrapper">
             <button id={id} type={type} disabled={disabled} className={`${buttonVarient} ${className}`} onClick={handleButtonClick}>
-                {props.children}
+                {children}
             </button>
         </div>
     );
@@ -66,9 +66,14 @@ Button.propTypes = {
     id: PropTypes.string,
 
     /**
-     * Specify a custom `className` for the `<b utton>`
+     * Specify a custom `className` for the `<button>`
      */
     className: PropTypes.string,
+
+    /**
+     * The content of the component.
+     */
+    children: PropTypes.node,
 
     /**
      * The content of the component.
@@ -89,7 +94,13 @@ Button.propTypes = {
      * `onClick` handler that is called whenever the
      * `<button>` is clicked
      */
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+
+    /**
+     *Specify the  Button varient.
+     *
+     */
+    variant: PropTypes.string
 };
 
 export default Button;

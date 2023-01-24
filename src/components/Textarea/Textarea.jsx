@@ -5,8 +5,8 @@ import '../../assets/style/soft-ui-dashboard-tailwind.css';
 const Textarea = (props) => {
     const { id, className, rows = 5, placeholder, name, children, onChange = () => {} } = props;
 
-    const handleOnChange = (evt) => {
-        onChange(evt);
+    const handleOnChange = (event) => {
+        onChange(event);
     };
 
     return (

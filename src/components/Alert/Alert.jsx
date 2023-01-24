@@ -7,7 +7,7 @@ const Alert = (props) => {
     const [alertVarient, setAlertVarient] = useState('relative w-full p-4 mb-4 text-white border');
     const [closeAlert, setCloseAlert] = useState(false);
 
-    const { id, varient, children } = props;
+    const { id, className, varient, children } = props;
 
     const handleCloseAlert = () => {
         setCloseAlert(true);
@@ -50,7 +50,7 @@ const Alert = (props) => {
                 <div
                     alert
                     id={id}
-                    className="grid place-items-center w-full min-h-[140px] bg-[#f8fafc] p-6 border border-blue-grey-50 rounded-lg scroll-mt-48 overflow-x-scroll lg:overflow-visible"
+                    className={`${className} grid place-items-center w-full min-h-[140px] bg-[#f8fafc] p-6 border border-blue-grey-50 rounded-lg scroll-mt-48 overflow-x-scroll lg:overflow-visible`}
                 >
                     <div alert class={alertVarient}>
                         {children}
@@ -73,11 +73,6 @@ const Alert = (props) => {
 
 Alert.propTypes = {
     /**
-     * The content of the component.
-     */
-    children: PropTypes.node,
-
-    /**
      * Specify a custom `id` for the `<Alert>`
      */
     id: PropTypes.string,
@@ -86,6 +81,11 @@ Alert.propTypes = {
      * Specify a custom `className` for the `<Alert>`
      */
     className: PropTypes.string,
+
+    /**
+     * The content of the component.
+     */
+    children: PropTypes.node,
 
     /**
      * Specify a custom `varient` for the `<Alert>`

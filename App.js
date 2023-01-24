@@ -9,6 +9,7 @@ import Typography from './src/components/Typography/Typography';
 import Textarea from './src/components/Textarea';
 import Card from './src/components/Card';
 import StatsCard from './src/components/Card/StatsCard';
+import Collapse from './src/components/Collapse';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faList } from '@fortawesome/free-solid-svg-icons';
@@ -21,7 +22,7 @@ const App = () => {
     return (
         <div>
             <TextField onChange={handleChange} varient="large" id="cdcf" />
-            <Button>Button</Button>
+            <Button varient="outlined">Button</Button>
             <Button>
                 <FontAwesomeIcon icon={faList} />
             </Button>
@@ -30,7 +31,7 @@ const App = () => {
             <Progress varient="fuchsia" progressPercentage="100%" />
             <Typography variant="h6">Hello</Typography>
             <Textarea>Heloooo world</Textarea>
-            <div>
+            <div style={{ display: 'flex' }}>
                 <StatsCard title={`Today's Money`} amount="$53,000" percentageChange="+55%" icon={<FontAwesomeIcon icon={faList} />} />
             </div>
             <Card
@@ -39,49 +40,10 @@ const App = () => {
                 actionName="View Project"
                 title="Modren"
                 body="As Uber works through a huge amount of internal management turmoil."
-                avatarList={[
-                    {
-                        imageURL:
-                            'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-dashboard/assets/img/team-4.jpg'
-                    },
-                    {
-                        imageURL:
-                            'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-dashboard/assets/img/team-3.jpg'
-                    },
-                    {
-                        imageURL:
-                            'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-dashboard/assets/img/team-4.jpg'
-                    },
-                    {
-                        imageURL:
-                            'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-dashboard/assets/img/team-3.jpg'
-                    },
-                    {
-                        imageURL:
-                            'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-dashboard/assets/img/team-3.jpg'
-                    },
-                    {
-                        imageURL:
-                            'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-dashboard/assets/img/team-3.jpg'
-                    },
-                    {
-                        imageURL:
-                            'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-dashboard/assets/img/team-3.jpg'
-                    },
-                    {
-                        imageURL:
-                            'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-dashboard/assets/img/team-3.jpg'
-                    },
-                    {
-                        imageURL:
-                            'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-dashboard/assets/img/team-3.jpg'
-                    },
-                    {
-                        imageURL:
-                            'https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-dashboard/assets/img/team-3.jpg'
-                    }
-                ]}
             />
+            <div>
+                <Collapse summary="Quetion 1" details="Answer for quetion" />
+            </div>
         </div>
     );
 };
