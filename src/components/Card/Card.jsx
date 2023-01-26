@@ -5,7 +5,7 @@ import map from 'lodash/map';
 import '../../assets/style/soft-ui-dashboard-tailwind.css';
 
 const Card = (props) => {
-    const { id, imageURL, imageAlt, caption, title, titleHref, body, actionName, avatarList } = props;
+    const { id, imageURL, imageAlt, caption, title, titleHref, body, actionName, avatarList = [] } = props;
 
     const renderAvatars = (avatarList) =>
         map(avatarList, (avatar) => (
@@ -39,15 +39,19 @@ const Card = (props) => {
                         </a>
                     )}
                     <p className="mb-6 leading-normal text-sm">{body}</p>
-                    <div className="flex items-center justify-between">
-                        <button
-                            type="button"
-                            className="inline-block px-8 py-2 mb-0 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer leading-pro ease-soft-in text-xs hover:scale-102 active:shadow-soft-xs tracking-tight-soft border-fuchsia-500 text-fuchsia-500 hover:border-fuchsia-500 hover:bg-transparent hover:text-fuchsia-500 hover:opacity-75 hover:shadow-none active:bg-fuchsia-500 active:text-white active:hover:bg-transparent active:hover:text-fuchsia-500"
-                        >
-                            {actionName}
-                        </button>
-                        <div class="mt-2">{renderAvatars(avatarList)}</div>
-                    </div>
+                    {avatarList.length > 0 && (
+                        <div className="flex items-center justify-between">
+                            {actionName && (
+                                <button
+                                    type="button"
+                                    className="inline-block px-8 py-2 mb-0 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer leading-pro ease-soft-in text-xs hover:scale-102 active:shadow-soft-xs tracking-tight-soft border-fuchsia-500 text-fuchsia-500 hover:border-fuchsia-500 hover:bg-transparent hover:text-fuchsia-500 hover:opacity-75 hover:shadow-none active:bg-fuchsia-500 active:text-white active:hover:bg-transparent active:hover:text-fuchsia-500"
+                                >
+                                    {actionName}
+                                </button>
+                            )}
+                            <div class="mt-2">{renderAvatars(avatarList)}</div>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

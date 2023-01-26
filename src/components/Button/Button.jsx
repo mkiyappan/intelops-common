@@ -76,11 +76,6 @@ Button.propTypes = {
     children: PropTypes.node,
 
     /**
-     * The content of the component.
-     */
-    children: PropTypes.node,
-
-    /**
      * Type of the button component.
      */
     type: PropTypes.string,

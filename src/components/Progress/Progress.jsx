@@ -49,7 +49,7 @@ const Progress = (props) => {
                     </div>
                 </div>
             </div>
-            <div class="w-full">
+            <div id={id} className={`${className} w-full`}>
                 <div class="flex mb-2">
                     <span class="mr-2 font-semibold leading-normal capitalize text-sm">{children}</span>
                     <span class="ml-auto font-semibold leading-normal text-sm">{progressPercentage}</span>

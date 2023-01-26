@@ -44,7 +44,7 @@ const TextField = (props) => {
             default:
                 setTextboxVarient(textboxVarient);
         }
-    }, []);
+    }, [varient]);
 
     return (
         <div
