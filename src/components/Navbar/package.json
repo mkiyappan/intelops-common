@@ -1,7 +1,7 @@
 {
     "name": "intelops_ui",
     "version": "1.0.0",
-    "description": "Button component",
+    "description": "Navbar component",
     "main": "index.js",
     "author": "Jaspin Suji",
     "license": "ISC",
