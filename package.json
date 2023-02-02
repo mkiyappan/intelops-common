@@ -4,11 +4,12 @@
   "description": "intelops-common-ui components",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --open --hot",
-    "build": "webpack --mode production",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
+    "build:components": "lerna bootstrap && lerna exec npm run \"build\"",
+    "clean:components": "lerna exec npm run \"clean\"",
+    "publish:components": "lerna publish",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start-storybook -p 9001 -c .storybook"
+},
   "author": "Jaspin Suji",
   "license": "ISC",
   "dependencies": {

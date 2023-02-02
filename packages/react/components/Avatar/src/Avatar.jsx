@@ -1,0 +1,28 @@
+import React, { useEffect, useState } from 'react';
+import "../../../assets/style/soft-ui-dashboard-tailwind.css"
+
+const Avatar = (props) => {
+
+    const [avatarVarient, setAvatarVarient] = useState('inline-flex items-center justify-center w-12 h-12 mr-2 text-white transition-all duration-200 ease-in-out text-sm');
+
+    useEffect(() => {
+        if (props.varient === "square") {
+            setAvatarVarient(avatarVarient+ ' rounded-xl');
+        }
+        if (props.varient === "rounded") {
+            setAvatarVarient(avatarVarient+ ' rounded-circle');
+        }
+    }, [props]);
+
+    return (
+        <div id='input sizing' className='grid place-items-center w-full min-h-[140px] bg-[#f8fafc] p-6 border border-blue-grey-50 rounded-lg scroll-mt-48 overflow-x-scroll lg:overflow-visible'>
+            <img
+                src={props.src}
+                alt={props.alt}
+                class={avatarVarient}
+            />
+        </div>
+    )
+}
+
+export default Avatar

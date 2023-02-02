@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-import TextField from './src/components/TextField/TextField';
-import Button from './src/components/Button/Button';
-import Alert from './src/components/Alert/Alert';
-import Chip from './src/components/Chip/Chip';
-import Progress from './src/components/Progress/Progress';
-import Typography from './src/components/Typography/Typography';
-import Textarea from './src/components/Textarea';
-import Card from './src/components/Card';
-import StatsCard from './src/components/Card/StatsCard';
+import TextField from './packages/react/components/TextField/src/TextField';
+import Button from './packages/react/components/Button/src/Button';
+import Alert from './packages/react/components/Alert/src/Alert';
+import Chip from './packages/react/components/Chip/src/Chip';
+import Progress from './packages/react/components/Progress/src/Progress';
+import Typography from './packages/react/components/Typography/src/Typography';
+import Textarea from './packages/react/components/Textarea/src/Textarea';
+import Card from './packages/react/components/Card/src/Card';
+import StatsCard from './packages/react/components/Card/src/StatsCard';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faList } from '@fortawesome/free-solid-svg-icons';
