@@ -25,7 +25,7 @@ const App = () => {
     };
     return (
         <div>
-            <TextField onChange={handleChange} varient="large" id="cdcf" />
+            <TextField onChange={handleChange} variant="small" id="cdcf" />
             <Button varient="outlined">Button</Button>
             <Button>
                 <FontAwesomeIcon icon={faList} />

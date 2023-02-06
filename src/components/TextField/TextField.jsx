@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import '../../assets/style/soft-ui-dashboard-tailwind.css';
+// import '../../assets/style/soft-ui-dashboard-tailwind.css';
 
 const TextField = (props) => {
     const {

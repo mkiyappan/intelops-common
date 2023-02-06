@@ -6,5 +6,6 @@ import Progress from './Progress';
 import Textarea from './Textarea';
 import TextField from './TextField';
 import Typography from './Typography';
+import Switch from './Switch';
 
-export { Alert, Button, Card, Chip, Progress, Textarea, TextField, Typography };
+export { Alert, Switch, Button, Card, Chip, Progress, Textarea, TextField, Typography };
